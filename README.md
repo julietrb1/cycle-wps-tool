@@ -4,6 +4,15 @@
 
 Cycle is a draft-quality, thrown-together Python script which uses [mdk4](https://github.com/aircrack-ng/mdk4), [Reaver](https://github.com/t6x/reaver-wps-fork-t6x), and [wash](https://github.com/t6x/reaver-wps-fork-t6x#wash-usage) to perform WPS PIN attacks on a given AP, and then performs a suite of attacks on it if it locks. If it unlocks, continue PIN attacks. Rinse and repeat.
 
+## Features
+
+- Configurable attack selection
+- MAC changing to spoof as client on AP
+- Colour-coded fancy console and file logging
+- Output of useful statistics while attacking (such as CPU and DoS attacks)
+- Simple, low-requirement script
+- Designed to be as environment-agnostic (within reason)
+
 ## Installation
 
 Requirements include:
@@ -98,7 +107,7 @@ This is where Cycle comes in to save the day. Hopefully. It aggregates ideas fro
 
 ### Will this be maintained regularly?
 
-Don't count on it. If it is, consider it a bonus. This was created solely as an educational exercise to broaden my understanding of technology.
+Don't count on it. If it is, consider it a bonus. This was created solely as an educational exercise to broaden my understanding of technology. Do I want you to fork this repo if you think you can make it better and go your own way, so you can make the world a better, more secure place? Absolutely.
 
 ### Do I endorse using this tool to break the law or violate personal/moral rights?
 

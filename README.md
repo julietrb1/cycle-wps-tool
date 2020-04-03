@@ -45,7 +45,7 @@ python3 -m venv env
 source env/bin/activate
 ```
 
-**Step 3: Install `pip` requirements:**
+**Step 3: Install `pip` requirements**
 
 ```bash
 pip install -r requirements.txt

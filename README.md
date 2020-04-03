@@ -54,9 +54,9 @@ pip install -r requirements.txt
 ## Usage
 
 ```
-usage: cycle.py [-h] [-b BSSID] [-w WAIT_TIME] [-c CHANNEL] [-N NO_NACKS] [-S]
+usage: cycle.py [-h] [-b BSSID] [-w WAIT_TIME] [-c CHANNEL] [-N] [-S]
                 [-i INTERFACE] [-v] [-s] [-m MAC_ADDRESS] [-1] [-2] [-3] [-4]
-                [-9 RANDOM_ATTACKS]
+                [-9 MINS]
 
 optional arguments:
   -h, --help            show this help message and exit

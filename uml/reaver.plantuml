@@ -1,0 +1,43 @@
+@startuml reaver
+(*) --> "Switching"
+if "Previous session?" then
+    --> [Yes] "Restore previous session?"
+    if "Restore?" then
+        -->[Yes] "Restored previous session"
+        --> "Waiting for beacon" as beacon
+    else
+        ->[No] beacon
+    endif
+else
+    --> beacon
+endif
+if "Locked?" then
+    -->[Yes] "Detected AP rate limiting" as limiting
+    if "Unlocked?" then
+        -->[Yes] "Trying pin" as trying
+    else
+        -->[No] limiting
+    endif
+else
+    -->[No] trying
+endif
+if "Timeout?" then
+    -->[Yes] "Receive timeout occurred" as timeout
+    if "Fixed?" then
+        -->[Yes] trying
+    else
+        if "Locked?" then
+            -->[Yes] limiting
+        else
+            -->[No] timeout
+        endif
+    endif
+else
+    if "Correct PIN?" then
+        -->[Yes] "Pin cracked"
+        --> (*)
+    else
+        -->[No] trying
+    endif
+
+@enduml

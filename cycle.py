@@ -307,8 +307,8 @@ def process_args():
     parser.add_argument('-w', '--wait-time', type=int, default=60,
                         help='time (secs) to wait between lock checks when attacking')
     parser.add_argument('-c', '--channel', type=int, help='channel of target BSSID(s)')
-    parser.add_argument('-N', '--no-nacks', type=bool, default=True,
-                        help='disables sending NACKS to speed up some attacks')
+    parser.add_argument('-N', '--send-nacks', type=bool, default=True, action='store_false',
+                        help='sending NACKS - disabled by default to speed up some attacks')
     parser.add_argument('-S', '--small', action='store_true',
                         help='enables small subgroup confinement attack on Diffie-Hellman')
     parser.add_argument('-i', '--interface', type=str, default='wlan0mon',
@@ -320,7 +320,7 @@ def process_args():
     parser.add_argument('-2', '--deauth', action='store_true', help='run deauth attacks when AP locked')
     parser.add_argument('-3', '--michael', action='store_true', help='run Michael attacks when AP locked')
     parser.add_argument('-4', '--eapol', action='store_true', help='run EAPOL attacks when AP locked')
-    parser.add_argument('-9', '--random-attacks', type=int,
+    parser.add_argument('-9', '--random-attacks', metavar='MINS', type=int,
                         help='cycle through random attacks at this set interval (mins)')
     return parser.parse_args()
 

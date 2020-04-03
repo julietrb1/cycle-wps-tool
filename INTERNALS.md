@@ -18,7 +18,7 @@ To ease my (and others') understanding of Reaver's output and how Cycle is inten
 
 ### Terminating Reaver
 
-Prior to recently, all processes that are spawned by Cycle are `kill`ed when Cycle is done with them. An example of this is when a network is being DDoSed, and becomes unlocked. The DDoS processes (`mdk4`) are sent `kill()` because we don't care much about asking them nicely and waiting for them to `terminate`. 
+Prior to recent changes, all processes that are spawned by Cycle are `kill`ed when Cycle is done with them. An example of this is when a network is being DDoSed, and becomes unlocked. The DDoS processes (`mdk4`) are sent `kill()` because we don't care much about asking them nicely and waiting for them to `terminate`. 
 
 One mistake I made was asking Reaver to do the same. The problem with this is that Reaver saves state containing the PINs that it has tried against WPS networks. If Reaver is `kill`ed, it doesn't save that state. What I found then, is that:
  

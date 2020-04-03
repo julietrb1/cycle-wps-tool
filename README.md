@@ -103,6 +103,10 @@ I found tools such as [VMR-MDK-K2-2017R-012x4](https://github.com/chunkingz/VMR-
 
 This is where Cycle comes in to save the day. Hopefully. It aggregates ideas from these tools, and consolidates them all into an uncomplicated, low-requirement Python 3.x script.
 
+## Extra for Experts
+
+If you wish to see more on how Cycle works internally, head over to [Internals](./INTERNALS.md) for more.
+
 ## FAQs
 
 ### Will this be maintained regularly?

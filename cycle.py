@@ -308,7 +308,7 @@ def process_args():
                         help='time (secs) to wait between lock checks when attacking')
     parser.add_argument('-c', '--channel', type=int, help='channel of target BSSID(s)')
     parser.add_argument('-N', '--send-nacks', action='store_true',
-                        help='sending NACKS - disabled by default to speed up some attacks')
+                        help='send NACKs - disabled by default to speed up some attacks')
     parser.add_argument('-S', '--small', action='store_true',
                         help='enables small subgroup confinement attack on Diffie-Hellman')
     parser.add_argument('-i', '--interface', type=str, default='wlan0mon',

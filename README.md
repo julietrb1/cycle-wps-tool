@@ -66,8 +66,8 @@ optional arguments:
                         time (secs) to wait between lock checks when attacking
   -c CHANNEL, --channel CHANNEL
                         channel of target BSSID(s)
-  -N NO_NACKS, --no-nacks
-                        disables sending NACKS to speed up some attacks
+  -N, --send-nacks      sending NACKS - disabled by default to speed up some
+                        attacks
   -S, --small           enables small subgroup confinement attack on Diffie-
                         Hellman
   -i INTERFACE, --interface INTERFACE

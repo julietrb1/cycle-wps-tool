@@ -307,7 +307,7 @@ def process_args():
     parser.add_argument('-w', '--wait-time', type=int, default=60,
                         help='time (secs) to wait between lock checks when attacking')
     parser.add_argument('-c', '--channel', type=int, help='channel of target BSSID(s)')
-    parser.add_argument('-N', '--send-nacks', type=bool, default=True, action='store_false',
+    parser.add_argument('-N', '--send-nacks', action='store_true',
                         help='sending NACKS - disabled by default to speed up some attacks')
     parser.add_argument('-S', '--small', action='store_true',
                         help='enables small subgroup confinement attack on Diffie-Hellman')
@@ -370,7 +370,7 @@ def main():
                    'deauth': attack_deauth,
                    'michael': attack_michael,
                    'eapol': attack_eapol}
-        run_cycle(args.bssid, args.wait_time, args.channel, 5, args.interface, args.no_nacks, args.small,
+        run_cycle(args.bssid, args.wait_time, args.channel, 5, args.interface, not args.send_nacks, args.small,
                   (args.spoof_mac, args.mac_address), attacks)
 
 

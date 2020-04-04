@@ -91,7 +91,7 @@ In my exploration through desire to learn more about the intricacies of wireless
 
 What I found in my amateur, playful research is that there is a **massive** amount of fragmentation and missing pieces in information posted on the **very real, very current** weaknesses of wireless standards such as WPS.
 
-Then, I found some gold mines! Some people had talked about ways to automate getting around WPS locks, so that one could start a tool and have it unlock before your eyes. However, I couldn't find any such tool, even though these conversations were from years back.
+Then, I found some gold mines! Some people had [talked about ways to automate getting around WPS locks](https://forums.kali.org/showthread.php?25459-Force-an-AP-to-reboot&p=46155#post46155), so that one could start a tool and have it unlock before your eyes. However, I couldn't find any such tool that matched my requirements and expecations, even though these conversations were from years back.
 
 These discussions involved having a tool run a WPS PIN attack on an AP and then, if and when the AP locks, run one or more known and semi-proven attacks on said AP to force it to reboot or confuse it. If it unlocks, continue. Rinse and repeat.
 
